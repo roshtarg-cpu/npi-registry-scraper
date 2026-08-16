@@ -105,3 +105,4 @@ Every result includes:
 - Works with Claude, ChatGPT, and MCP agents for AI-powered healthcare lead generation
 - No API key or authentication required for the underlying data source
 - Rate-limited responsibly: 3 retries per request, polite pagination
+# Auto-build enabled
