@@ -5,40 +5,5 @@
   "description": "Scrape US healthcare provider data from the NPPES NPI Registry. Extract doctor, nurse, clinic, and organization profiles by specialty, state, city, or name. The only NPI Registry scraper on Apify.",
   "version": "0.1",
   "buildTag": "latest",
-  "dockerfile": "../Dockerfile",
-  "output": {
-    "schema": {
-      "type": "object",
-      "properties": {
-        "npi": {"type": "string", "description": "10-digit National Provider Identifier"},
-        "enumerationType": {"type": "string", "description": "NPI-1 (individual) or NPI-2 (organization)"},
-        "isIndividual": {"type": "boolean", "description": "True if individual provider, false if organization"},
-        "status": {"type": "string", "description": "Provider status (A=Active, D=Deactivated)"},
-        "firstName": {"type": ["string", "null"]},
-        "middleName": {"type": ["string", "null"]},
-        "lastName": {"type": ["string", "null"]},
-        "credential": {"type": ["string", "null"], "description": "Professional credential (MD, DO, NP, PA, etc.)"},
-        "gender": {"type": ["string", "null"]},
-        "organizationName": {"type": ["string", "null"]},
-        "locationAddress1": {"type": ["string", "null"]},
-        "locationCity": {"type": ["string", "null"]},
-        "locationState": {"type": ["string", "null"]},
-        "locationZip": {"type": ["string", "null"]},
-        "locationPhone": {"type": ["string", "null"]},
-        "locationFax": {"type": ["string", "null"]},
-        "mailingAddress1": {"type": ["string", "null"]},
-        "mailingCity": {"type": ["string", "null"]},
-        "mailingState": {"type": ["string", "null"]},
-        "mailingZip": {"type": ["string", "null"]},
-        "primaryTaxonomyCode": {"type": ["string", "null"], "description": "NUCC taxonomy code"},
-        "primaryTaxonomyDesc": {"type": ["string", "null"], "description": "Specialty description"},
-        "primaryTaxonomyLicense": {"type": ["string", "null"]},
-        "allTaxonomies": {"type": "array", "description": "All taxonomies/specialties for this provider"},
-        "enumerationDate": {"type": ["string", "null"]},
-        "lastUpdated": {"type": ["string", "null"]},
-        "otherNames": {"type": "array", "description": "DBA / other organization names"},
-        "scrapedAt": {"type": "string", "description": "ISO timestamp of when this record was scraped"}
-      }
-    }
-  }
+  "dockerfile": "../Dockerfile"
 }
