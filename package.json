@@ -1,0 +1,6 @@
+{
+  "name": "npi-registry-scraper",
+  "version": "0.1.0",
+  "description": "NPI Registry Scraper — US Healthcare Provider Leads",
+  "main": "src/main.py"
+}

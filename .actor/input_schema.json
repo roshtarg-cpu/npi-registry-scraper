@@ -1,0 +1,75 @@
+{
+  "title": "NPI Registry Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "taxonomyDescription": {
+      "title": "Specialty / Taxonomy Description",
+      "type": "string",
+      "description": "Filter by provider specialty or taxonomy description. Examples: 'Internal Medicine', 'Cardiology', 'Dentist', 'Nurse Practitioner', 'Pharmacy'. Leave empty to search by name or location only.",
+      "editor": "textfield",
+      "prefill": "Internal Medicine"
+    },
+    "state": {
+      "title": "State (2-letter code)",
+      "type": "string",
+      "description": "US state abbreviation to filter by. Examples: CA, NY, TX, FL. Leave empty for all states.",
+      "editor": "textfield",
+      "prefill": "CA"
+    },
+    "city": {
+      "title": "City",
+      "type": "string",
+      "description": "City name to filter by. Optional.",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "postalCode": {
+      "title": "Postal / ZIP Code",
+      "type": "string",
+      "description": "Filter by ZIP code. Optional.",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "firstName": {
+      "title": "First Name (individual providers)",
+      "type": "string",
+      "description": "Filter by provider first name. Optional.",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "lastName": {
+      "title": "Last Name (individual providers)",
+      "type": "string",
+      "description": "Filter by provider last name. Optional.",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "organizationName": {
+      "title": "Organization Name (NPI-2)",
+      "type": "string",
+      "description": "Filter by organization name. Optional.",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "enumerationType": {
+      "title": "Enumeration Type",
+      "type": "string",
+      "description": "NPI-1 for individual providers, NPI-2 for organizations/clinics. Leave empty for both.",
+      "editor": "select",
+      "enum": ["", "NPI-1", "NPI-2"],
+      "enumTitles": ["Both (individuals and organizations)", "NPI-1 — Individual providers only", "NPI-2 — Organizations and clinics only"],
+      "prefill": ""
+    },
+    "maxResults": {
+      "title": "Max Results",
+      "type": "integer",
+      "description": "Maximum number of provider records to scrape. Default is 50. Use 200+ for bulk exports.",
+      "editor": "number",
+      "default": 50,
+      "prefill": 10,
+      "minimum": 1,
+      "maximum": 100000
+    }
+  }
+}
