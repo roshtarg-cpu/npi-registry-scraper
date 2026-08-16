@@ -5,5 +5,25 @@
   "description": "Scrape US healthcare provider data from the NPPES NPI Registry. Extract doctor, nurse, clinic, and organization profiles by specialty, state, city, or name. The only NPI Registry scraper on Apify.",
   "version": "0.1",
   "buildTag": "latest",
-  "dockerfile": "../Dockerfile"
+  "dockerfile": "../Dockerfile",
+  "output": {
+    "actorOutputSchemaVersion": 1,
+    "fields": [
+      {"name": "npi", "type": "string", "description": "10-digit National Provider Identifier"},
+      {"name": "enumerationType", "type": "string", "description": "NPI-1 (individual) or NPI-2 (organization)"},
+      {"name": "isIndividual", "type": "boolean", "description": "True if individual provider"},
+      {"name": "status", "type": "string", "description": "Provider status"},
+      {"name": "firstName", "type": "string", "description": "First name (individual providers)"},
+      {"name": "lastName", "type": "string", "description": "Last name (individual providers)"},
+      {"name": "credential", "type": "string", "description": "Professional credential (MD, DO, NP, etc.)"},
+      {"name": "organizationName", "type": "string", "description": "Organization or clinic name"},
+      {"name": "locationCity", "type": "string", "description": "City of practice location"},
+      {"name": "locationState", "type": "string", "description": "State abbreviation"},
+      {"name": "locationZip", "type": "string", "description": "ZIP code"},
+      {"name": "locationPhone", "type": "string", "description": "Phone number"},
+      {"name": "primaryTaxonomyDesc", "type": "string", "description": "Primary specialty description"},
+      {"name": "primaryTaxonomyLicense", "type": "string", "description": "State license number"},
+      {"name": "scrapedAt", "type": "string", "description": "ISO timestamp when scraped"}
+    ]
+  }
 }
