@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "npi-registry-scraper",
-  "title": "NPI Registry Scraper — US Healthcare Provider Leads",
+  "title": "NPI Registry Scraper \u2014 US Healthcare Provider Leads",
   "description": "Scrape US healthcare provider data from the NPPES NPI Registry. Extract doctor, nurse, clinic, and organization profiles by specialty, state, city, or name. The only NPI Registry scraper on Apify.",
   "version": "0.1",
   "buildTag": "latest",
@@ -16,6 +16,55 @@
         "type": "string",
         "description": "Link to the provider's public NPI Registry profile",
         "template": "https://npiregistry.cms.hhs.gov/provider-view/{{npi}}"
+      }
+    }
+  },
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "fields": {},
+      "views": {
+        "overview": {
+          "title": "Results",
+          "transformation": {
+            "fields": [
+              "npi",
+              "enumerationType",
+              "isIndividual",
+              "status",
+              "enumerationDate",
+              "lastUpdated",
+              "firstName",
+              "middleName",
+              "lastName",
+              "namePrefix",
+              "nameSuffix",
+              "credential",
+              "gender",
+              "soleProprietor",
+              "organizationName",
+              "locationAddress1",
+              "locationAddress2",
+              "locationCity",
+              "locationState",
+              "locationZip",
+              "locationCountry",
+              "locationPhone",
+              "locationFax",
+              "mailingAddress1",
+              "mailingCity",
+              "mailingState",
+              "mailingZip",
+              "primaryTaxonomyCode",
+              "primaryTaxonomyDesc",
+              "primaryTaxonomyState",
+              "primaryTaxonomyLicense",
+              "allTaxonomies",
+              "otherNames",
+              "scrapedAt"
+            ]
+          }
+        }
       }
     }
   }
